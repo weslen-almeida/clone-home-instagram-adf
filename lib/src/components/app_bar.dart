@@ -5,12 +5,8 @@ class AppBarInstagram extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Column(
-      children: [
-        AppBar(
-          title: const Text('Instagram header'),
-        ),
-      ],
+    return AppBar(
+      title: Text('Instagram header'),
     );
   }
 }
