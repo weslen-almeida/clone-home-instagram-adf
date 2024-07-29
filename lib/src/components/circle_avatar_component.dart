@@ -8,7 +8,7 @@ class CircleAvatarComponent extends StatelessWidget {
     return const Row(
       children: [
         Padding(
-          padding: const EdgeInsets.all(8),
+          padding: EdgeInsets.all(8),
           child: ImageAvatar(
             urlImage:
                 'https://conteudo.imguol.com.br/c/entretenimento/ce/2018/10/05/rowan-atkinson-como-mr-bean-1538790413341_v2_900x506.png',
@@ -24,6 +24,10 @@ class CircleAvatarComponent extends StatelessWidget {
         ImageAvatar(
           urlImage:
               'https://cdn.britannica.com/84/200584-050-7EC3F3F6/Jim-Carrey-2012.jpg',
+        ),
+        Divider(
+          color: Colors.grey,
+          thickness: 0.2,
         ),
       ],
     );

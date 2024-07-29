@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/src/components/app_bar.dart';
-import 'package:myapp/src/components/circle_avatar_component.dart';
+import 'package:myapp/src/components/feed_component.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -8,41 +7,30 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Instagram'),
-        actions: const [
-          BottomAppBar(
-            child: Row(
-              children: [
-                BottomAppBar(
-                  child: Icon(Icons.favorite_border),
-                ),
-                BottomAppBar(
-                  child: Icon(Icons.voice_chat_rounded),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-      body: Center(
-        child: LayoutBuilder(
-          builder: (context, constraints) => Column(
-            children: [
-              Row(
+        appBar: AppBar(
+          title: const Text('Instagram'),
+          actions: const [
+            BottomAppBar(
+              child: Row(
                 children: [
-                  const CircleAvatarComponent()
+                  BottomAppBar(
+                    child: Icon(Icons.favorite_border),
+                  ),
+                  BottomAppBar(
+                    child: Icon(Icons.voice_chat_rounded),
+                  ),
                 ],
               ),
-              Container(
-                width: constraints.maxWidth,
-                height: constraints.maxHeight,
-                color: Colors.red,
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
-      ),
-    );
+        body: FeedComponent()
+        // ListView.builder(
+        //   itemCount: 1,
+        //   itemBuilder: (context, index) {
+        //     return FeedComponent();
+        //   },
+        // ),
+        );
   }
 }
