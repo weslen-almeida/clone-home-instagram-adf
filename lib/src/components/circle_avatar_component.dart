@@ -5,29 +5,6 @@ class CircleAvatarComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //   return const Row(
-    //     children: [
-    //       Padding(
-    //         padding: EdgeInsets.all(8),
-    //         child: ImageAvatar(
-    //           urlImage:
-    //               'https://conteudo.imguol.com.br/c/entretenimento/ce/2018/10/05/rowan-atkinson-como-mr-bean-1538790413341_v2_900x506.png',
-    //         ),
-    //       ),
-    //       ImageAvatar(
-    //         urlImage:
-    //             'https://www.einerd.com.br/wp-content/uploads/2016/09/eddie-murphy.jpg',
-    //       ),
-    //       SizedBox(
-    //         width: 8,
-    //       ),
-    //       ImageAvatar(
-    //         urlImage:
-    //             'https://cdn.britannica.com/84/200584-050-7EC3F3F6/Jim-Carrey-2012.jpg',
-    //       ),
-    //     ],
-    //   );
-    // }
     return Container(
       height: 100,
       child: ListView.builder(
@@ -35,16 +12,10 @@ class CircleAvatarComponent extends StatelessWidget {
         itemCount: 10, // Exemplo com 10 histórias
         itemBuilder: (context, index) {
           return Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(4.0),
             child: Column(
               children: [
-                // CircleAvatar(
-                //   radius: 30,
-                //   backgroundImage: NetworkImage(
-                //       'https://via.placeholder.com/150'), // Imagem de exemplo
-                // ),
-                // SizedBox(height: 4),
-                ImageAvatar(
+                const ImageAvatar(
                   urlImage:
                       'https://www.einerd.com.br/wp-content/uploads/2016/09/eddie-murphy.jpg',
                 ),
